@@ -18,5 +18,8 @@
     prefixGauge: "",
     prefixSet: ""
   },
+  
+  deleteIdleStats: true,
+  
   dumpMessages: false
 }
