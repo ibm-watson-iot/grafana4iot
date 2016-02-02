@@ -54,8 +54,8 @@ RUN     mkdir /src/grafana                                                      
         rm /src/grafana.tar.gz
 
 # Install IoTF Connector for StatsD
-RUN     mkdir -p /opt/connector-statsd
-ADD     iotf-statsd/connector-statsd.py /opt/connector-statsd/connector-statsd.py
+RUN     mkdir -p /opt/connector-statsd &&\
+        wget https://raw.githubusercontent.com/ibm-watson-iot/connector-statsd/master/connector-statsd.py -O /opt/connector-statsd/connector-statsd.py
 ADD     iotf-statsd/application.cfg /opt/connector-statsd/application.cfg
 
 # =============================================================================
