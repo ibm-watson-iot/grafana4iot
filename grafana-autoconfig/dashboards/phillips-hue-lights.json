@@ -1,0 +1,968 @@
+{
+  "id": 2,
+  "title": "Phillips Hue Lights",
+  "originalTitle": "Phillips Hue Lights",
+  "tags": [],
+  "style": "dark",
+  "timezone": "browser",
+  "editable": true,
+  "hideControls": false,
+  "sharedCrosshair": false,
+  "rows": [
+    {
+      "collapse": false,
+      "editable": true,
+      "height": "300px",
+      "panels": [
+        {
+          "cacheTimeout": null,
+          "colorBackground": true,
+          "colorValue": false,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(9, 124, 19, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "editable": true,
+          "error": false,
+          "format": "none",
+          "height": "60px",
+          "hideTimeOverride": true,
+          "id": 2,
+          "interval": null,
+          "links": [],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "scopedVars": {
+            "deviceId": {
+              "text": "00-17-88-01-10-35-5a-19-0b",
+              "value": "00-17-88-01-10-35-5a-19-0b",
+              "selected": true
+            }
+          },
+          "span": 6,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "targets": [
+            {
+              "target": "stats.hldtxx.LCT003.$deviceId.state.reachable"
+            }
+          ],
+          "thresholds": "0,1",
+          "timeFrom": "30s",
+          "title": "",
+          "type": "singlestat",
+          "valueFontSize": "80%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "Disconnected",
+              "value": "0"
+            },
+            {
+              "op": "=",
+              "text": "Connected",
+              "value": "1"
+            }
+          ],
+          "valueName": "current"
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": true,
+          "colorValue": false,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(9, 124, 19, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "decimals": null,
+          "editable": true,
+          "error": false,
+          "format": "none",
+          "height": "60px",
+          "hideTimeOverride": true,
+          "id": 3,
+          "interval": null,
+          "links": [],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "scopedVars": {
+            "deviceId": {
+              "text": "00-17-88-01-10-35-5a-19-0b",
+              "value": "00-17-88-01-10-35-5a-19-0b",
+              "selected": true
+            }
+          },
+          "span": 6,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "targets": [
+            {
+              "target": "stats.hldtxx.LCT003.$deviceId.state.on"
+            }
+          ],
+          "thresholds": "0,1",
+          "timeFrom": "30s",
+          "title": "",
+          "type": "singlestat",
+          "valueFontSize": "80%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "Off",
+              "value": "0"
+            },
+            {
+              "op": "=",
+              "text": "On",
+              "value": "1"
+            }
+          ],
+          "valueName": "current"
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": null,
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "grid": {
+            "leftLogBase": 1,
+            "leftMax": 254,
+            "leftMin": 0,
+            "rightLogBase": 1,
+            "rightMax": null,
+            "rightMin": null,
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "id": 1,
+          "legend": {
+            "alignAsTable": true,
+            "avg": true,
+            "current": true,
+            "max": true,
+            "min": true,
+            "show": true,
+            "total": false,
+            "values": true
+          },
+          "lines": true,
+          "linewidth": 2,
+          "links": [],
+          "minSpan": null,
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "repeat": null,
+          "scopedVars": {
+            "deviceId": {
+              "text": "00-17-88-01-10-35-5a-19-0b",
+              "value": "00-17-88-01-10-35-5a-19-0b",
+              "selected": true
+            }
+          },
+          "seriesOverrides": [],
+          "span": 6,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "target": "alias(stats.hldtxx.LCT003.$deviceId.state.bri, 'Brightness')",
+              "textEditor": false
+            },
+            {
+              "target": "alias(stats.hldtxx.LCT003.$deviceId.state.sat, 'Saturation')",
+              "textEditor": false
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Brightness & Saturation",
+          "tooltip": {
+            "shared": true,
+            "value_type": "cumulative"
+          },
+          "type": "graph",
+          "x-axis": true,
+          "y-axis": true,
+          "y_formats": [
+            "short",
+            "short"
+          ]
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": null,
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "grid": {
+            "leftLogBase": 1,
+            "leftMax": 500,
+            "leftMin": 154,
+            "rightLogBase": 1,
+            "rightMax": null,
+            "rightMin": null,
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "id": 5,
+          "legend": {
+            "alignAsTable": true,
+            "avg": true,
+            "current": true,
+            "max": true,
+            "min": true,
+            "show": true,
+            "total": false,
+            "values": true
+          },
+          "lines": true,
+          "linewidth": 2,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "scopedVars": {
+            "deviceId": {
+              "text": "00-17-88-01-10-35-5a-19-0b",
+              "value": "00-17-88-01-10-35-5a-19-0b",
+              "selected": true
+            }
+          },
+          "seriesOverrides": [],
+          "span": 6,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "target": "alias(stats.hldtxx.LCT003.$deviceId.state.ct, 'Colour Temperature')",
+              "textEditor": false
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Colour Temperature",
+          "tooltip": {
+            "shared": true,
+            "value_type": "cumulative"
+          },
+          "type": "graph",
+          "x-axis": true,
+          "y-axis": true,
+          "y_formats": [
+            "short",
+            "short"
+          ]
+        }
+      ],
+      "repeat": "deviceId",
+      "scopedVars": {
+        "deviceId": {
+          "text": "00-17-88-01-10-35-5a-19-0b",
+          "value": "00-17-88-01-10-35-5a-19-0b",
+          "selected": true
+        }
+      },
+      "showTitle": true,
+      "title": "Device $deviceId"
+    },
+    {
+      "collapse": false,
+      "editable": true,
+      "height": "300px",
+      "panels": [
+        {
+          "cacheTimeout": null,
+          "colorBackground": true,
+          "colorValue": false,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(9, 124, 19, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "editable": true,
+          "error": false,
+          "format": "none",
+          "height": "60px",
+          "hideTimeOverride": true,
+          "id": 6,
+          "interval": null,
+          "links": [],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "scopedVars": {
+            "deviceId": {
+              "text": "00-17-88-01-10-35-5b-39-0b",
+              "value": "00-17-88-01-10-35-5b-39-0b",
+              "selected": true
+            }
+          },
+          "span": 6,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "targets": [
+            {
+              "target": "stats.hldtxx.LCT003.$deviceId.state.reachable"
+            }
+          ],
+          "thresholds": "0,1",
+          "timeFrom": "30s",
+          "title": "",
+          "type": "singlestat",
+          "valueFontSize": "80%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "Disconnected",
+              "value": "0"
+            },
+            {
+              "op": "=",
+              "text": "Connected",
+              "value": "1"
+            }
+          ],
+          "valueName": "current"
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": true,
+          "colorValue": false,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(9, 124, 19, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "decimals": null,
+          "editable": true,
+          "error": false,
+          "format": "none",
+          "height": "60px",
+          "hideTimeOverride": true,
+          "id": 7,
+          "interval": null,
+          "links": [],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "scopedVars": {
+            "deviceId": {
+              "text": "00-17-88-01-10-35-5b-39-0b",
+              "value": "00-17-88-01-10-35-5b-39-0b",
+              "selected": true
+            }
+          },
+          "span": 6,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "targets": [
+            {
+              "target": "stats.hldtxx.LCT003.$deviceId.state.on"
+            }
+          ],
+          "thresholds": "0,1",
+          "timeFrom": "30s",
+          "title": "",
+          "type": "singlestat",
+          "valueFontSize": "80%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "Off",
+              "value": "0"
+            },
+            {
+              "op": "=",
+              "text": "On",
+              "value": "1"
+            }
+          ],
+          "valueName": "current"
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": null,
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "grid": {
+            "leftLogBase": 1,
+            "leftMax": 254,
+            "leftMin": 0,
+            "rightLogBase": 1,
+            "rightMax": null,
+            "rightMin": null,
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "id": 8,
+          "legend": {
+            "alignAsTable": true,
+            "avg": true,
+            "current": true,
+            "max": true,
+            "min": true,
+            "show": true,
+            "total": false,
+            "values": true
+          },
+          "lines": true,
+          "linewidth": 2,
+          "links": [],
+          "minSpan": null,
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "repeat": null,
+          "scopedVars": {
+            "deviceId": {
+              "text": "00-17-88-01-10-35-5b-39-0b",
+              "value": "00-17-88-01-10-35-5b-39-0b",
+              "selected": true
+            }
+          },
+          "seriesOverrides": [],
+          "span": 6,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "target": "alias(stats.hldtxx.LCT003.$deviceId.state.bri, 'Brightness')",
+              "textEditor": false
+            },
+            {
+              "target": "alias(stats.hldtxx.LCT003.$deviceId.state.sat, 'Saturation')",
+              "textEditor": false
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Brightness & Saturation",
+          "tooltip": {
+            "shared": true,
+            "value_type": "cumulative"
+          },
+          "type": "graph",
+          "x-axis": true,
+          "y-axis": true,
+          "y_formats": [
+            "short",
+            "short"
+          ]
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": null,
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "grid": {
+            "leftLogBase": 1,
+            "leftMax": 500,
+            "leftMin": 154,
+            "rightLogBase": 1,
+            "rightMax": null,
+            "rightMin": null,
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "id": 9,
+          "legend": {
+            "alignAsTable": true,
+            "avg": true,
+            "current": true,
+            "max": true,
+            "min": true,
+            "show": true,
+            "total": false,
+            "values": true
+          },
+          "lines": true,
+          "linewidth": 2,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "scopedVars": {
+            "deviceId": {
+              "text": "00-17-88-01-10-35-5b-39-0b",
+              "value": "00-17-88-01-10-35-5b-39-0b",
+              "selected": true
+            }
+          },
+          "seriesOverrides": [],
+          "span": 6,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "target": "alias(stats.hldtxx.LCT003.$deviceId.state.ct, 'Colour Temperature')",
+              "textEditor": false
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Colour Temperature",
+          "tooltip": {
+            "shared": true,
+            "value_type": "cumulative"
+          },
+          "type": "graph",
+          "x-axis": true,
+          "y-axis": true,
+          "y_formats": [
+            "short",
+            "short"
+          ]
+        }
+      ],
+      "repeat": null,
+      "repeatIteration": 1453932704329,
+      "repeatRowId": 1,
+      "scopedVars": {
+        "deviceId": {
+          "text": "00-17-88-01-10-35-5b-39-0b",
+          "value": "00-17-88-01-10-35-5b-39-0b",
+          "selected": true
+        }
+      },
+      "showTitle": true,
+      "title": "Device $deviceId"
+    },
+    {
+      "collapse": false,
+      "editable": true,
+      "height": "300px",
+      "panels": [
+        {
+          "cacheTimeout": null,
+          "colorBackground": true,
+          "colorValue": false,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(9, 124, 19, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "editable": true,
+          "error": false,
+          "format": "none",
+          "height": "60px",
+          "hideTimeOverride": true,
+          "id": 10,
+          "interval": null,
+          "links": [],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "scopedVars": {
+            "deviceId": {
+              "text": "00-17-88-01-10-35-65-78-0b",
+              "value": "00-17-88-01-10-35-65-78-0b",
+              "selected": true
+            }
+          },
+          "span": 6,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "targets": [
+            {
+              "target": "stats.hldtxx.LCT003.$deviceId.state.reachable"
+            }
+          ],
+          "thresholds": "0,1",
+          "timeFrom": "30s",
+          "title": "",
+          "type": "singlestat",
+          "valueFontSize": "80%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "Disconnected",
+              "value": "0"
+            },
+            {
+              "op": "=",
+              "text": "Connected",
+              "value": "1"
+            }
+          ],
+          "valueName": "current"
+        },
+        {
+          "cacheTimeout": null,
+          "colorBackground": true,
+          "colorValue": false,
+          "colors": [
+            "rgba(245, 54, 54, 0.9)",
+            "rgba(9, 124, 19, 0.89)",
+            "rgba(50, 172, 45, 0.97)"
+          ],
+          "decimals": null,
+          "editable": true,
+          "error": false,
+          "format": "none",
+          "height": "60px",
+          "hideTimeOverride": true,
+          "id": 11,
+          "interval": null,
+          "links": [],
+          "maxDataPoints": 100,
+          "nullPointMode": "connected",
+          "nullText": null,
+          "postfix": "",
+          "postfixFontSize": "50%",
+          "prefix": "",
+          "prefixFontSize": "50%",
+          "scopedVars": {
+            "deviceId": {
+              "text": "00-17-88-01-10-35-65-78-0b",
+              "value": "00-17-88-01-10-35-65-78-0b",
+              "selected": true
+            }
+          },
+          "span": 6,
+          "sparkline": {
+            "fillColor": "rgba(31, 118, 189, 0.18)",
+            "full": false,
+            "lineColor": "rgb(31, 120, 193)",
+            "show": false
+          },
+          "targets": [
+            {
+              "target": "stats.hldtxx.LCT003.$deviceId.state.on"
+            }
+          ],
+          "thresholds": "0,1",
+          "timeFrom": "30s",
+          "title": "",
+          "type": "singlestat",
+          "valueFontSize": "80%",
+          "valueMaps": [
+            {
+              "op": "=",
+              "text": "Off",
+              "value": "0"
+            },
+            {
+              "op": "=",
+              "text": "On",
+              "value": "1"
+            }
+          ],
+          "valueName": "current"
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": null,
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "grid": {
+            "leftLogBase": 1,
+            "leftMax": 254,
+            "leftMin": 0,
+            "rightLogBase": 1,
+            "rightMax": null,
+            "rightMin": null,
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "id": 12,
+          "legend": {
+            "alignAsTable": true,
+            "avg": true,
+            "current": true,
+            "max": true,
+            "min": true,
+            "show": true,
+            "total": false,
+            "values": true
+          },
+          "lines": true,
+          "linewidth": 2,
+          "links": [],
+          "minSpan": null,
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "repeat": null,
+          "scopedVars": {
+            "deviceId": {
+              "text": "00-17-88-01-10-35-65-78-0b",
+              "value": "00-17-88-01-10-35-65-78-0b",
+              "selected": true
+            }
+          },
+          "seriesOverrides": [],
+          "span": 6,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "target": "alias(stats.hldtxx.LCT003.$deviceId.state.bri, 'Brightness')",
+              "textEditor": false
+            },
+            {
+              "target": "alias(stats.hldtxx.LCT003.$deviceId.state.sat, 'Saturation')",
+              "textEditor": false
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Brightness & Saturation",
+          "tooltip": {
+            "shared": true,
+            "value_type": "cumulative"
+          },
+          "type": "graph",
+          "x-axis": true,
+          "y-axis": true,
+          "y_formats": [
+            "short",
+            "short"
+          ]
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": null,
+          "editable": true,
+          "error": false,
+          "fill": 1,
+          "grid": {
+            "leftLogBase": 1,
+            "leftMax": 500,
+            "leftMin": 154,
+            "rightLogBase": 1,
+            "rightMax": null,
+            "rightMin": null,
+            "threshold1": null,
+            "threshold1Color": "rgba(216, 200, 27, 0.27)",
+            "threshold2": null,
+            "threshold2Color": "rgba(234, 112, 112, 0.22)"
+          },
+          "id": 13,
+          "legend": {
+            "alignAsTable": true,
+            "avg": true,
+            "current": true,
+            "max": true,
+            "min": true,
+            "show": true,
+            "total": false,
+            "values": true
+          },
+          "lines": true,
+          "linewidth": 2,
+          "links": [],
+          "nullPointMode": "connected",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "scopedVars": {
+            "deviceId": {
+              "text": "00-17-88-01-10-35-65-78-0b",
+              "value": "00-17-88-01-10-35-65-78-0b",
+              "selected": true
+            }
+          },
+          "seriesOverrides": [],
+          "span": 6,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "target": "alias(stats.hldtxx.LCT003.$deviceId.state.ct, 'Colour Temperature')",
+              "textEditor": false
+            }
+          ],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Colour Temperature",
+          "tooltip": {
+            "shared": true,
+            "value_type": "cumulative"
+          },
+          "type": "graph",
+          "x-axis": true,
+          "y-axis": true,
+          "y_formats": [
+            "short",
+            "short"
+          ]
+        }
+      ],
+      "repeat": null,
+      "repeatIteration": 1453932704329,
+      "repeatRowId": 1,
+      "scopedVars": {
+        "deviceId": {
+          "text": "00-17-88-01-10-35-65-78-0b",
+          "value": "00-17-88-01-10-35-65-78-0b",
+          "selected": true
+        }
+      },
+      "showTitle": true,
+      "title": "Device $deviceId"
+    }
+  ],
+  "nav": [
+    {
+      "collapse": false,
+      "enable": true,
+      "notice": false,
+      "now": true,
+      "refresh_intervals": [
+        "5s",
+        "10s",
+        "30s",
+        "1m",
+        "5m",
+        "15m",
+        "30m",
+        "1h",
+        "2h",
+        "1d"
+      ],
+      "status": "Stable",
+      "time_options": [
+        "5m",
+        "15m",
+        "1h",
+        "6h",
+        "12h",
+        "24h",
+        "2d",
+        "7d",
+        "30d"
+      ],
+      "type": "timepicker"
+    }
+  ],
+  "time": {
+    "from": "now-6h",
+    "to": "now"
+  },
+  "templating": {
+    "list": [
+      {
+        "allFormat": "glob",
+        "current": {
+          "tags": [],
+          "text": "00-17-88-01-10-35-5a-19-0b + 00-17-88-01-10-35-5b-39-0b + 00-17-88-01-10-35-65-78-0b",
+          "value": [
+            "00-17-88-01-10-35-5a-19-0b",
+            "00-17-88-01-10-35-5b-39-0b",
+            "00-17-88-01-10-35-65-78-0b"
+          ]
+        },
+        "datasource": null,
+        "includeAll": false,
+        "label": "deviceId",
+        "multi": true,
+        "multiFormat": "glob",
+        "name": "deviceId",
+        "options": [
+          {
+            "text": "00-17-88-01-10-35-5a-19-0b",
+            "value": "00-17-88-01-10-35-5a-19-0b",
+            "selected": true
+          },
+          {
+            "text": "00-17-88-01-10-35-5b-39-0b",
+            "value": "00-17-88-01-10-35-5b-39-0b",
+            "selected": true
+          },
+          {
+            "text": "00-17-88-01-10-35-65-78-0b",
+            "value": "00-17-88-01-10-35-65-78-0b",
+            "selected": true
+          }
+        ],
+        "query": "stats.hldtxx.LCT003.*",
+        "refresh": true,
+        "refresh_on_load": false,
+        "type": "query"
+      }
+    ]
+  },
+  "annotations": {
+    "list": []
+  },
+  "refresh": "10s",
+  "schemaVersion": 6,
+  "version": 5,
+  "links": []
+}
