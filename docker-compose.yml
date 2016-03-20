@@ -1,0 +1,25 @@
+version: '2'
+
+services:
+  grafana:
+    image: grafana4iot
+    build:
+      context: .
+    volumes:
+      - "/mnt/whisper:/opt/graphite/storage/whisper"
+    mem_limit: 512M
+    restart: always
+  
+  connector:
+    image: connector-statsd
+    build:
+      context: ../connector-statsd
+    links:
+      - grafana:graphite
+    environment:
+      - GRAPHITE_HOST=graphite
+      - GRAPHITE_PORT=2003
+      - IOT_API_KEY=${IOT_API_KEY}
+      - IOT_API_TOKEN=${IOT_API_TOKEN}
+    mem_limit: 256M
+    restart: always

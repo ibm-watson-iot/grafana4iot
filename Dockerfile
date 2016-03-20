@@ -30,17 +30,6 @@ RUN pip install Twisted==11.1.0
 RUN pip install Django==1.5
 RUN pip install pytz
 
-# Watson IoT Statsd Connector module dependencies
-RUN pip install ibmiotf statsd bottle
-
-
-# =============================================================================
-# Install NodeJS
-# =============================================================================
-RUN curl -sL https://deb.nodesource.com/setup_5.x | sudo -E bash - &&\
-	apt-get install -y nodejs
-
-
 # =============================================================================
 # Install Graphite, Carbon and Whisper and install
 # =============================================================================
@@ -63,14 +52,6 @@ RUN git clone https://github.com/graphite-project/graphite-web.git /src/graphite
 
 
 # =============================================================================
-# Install StatsD
-# =============================================================================
-RUN git clone https://github.com/etsy/statsd.git /src/statsd &&\
-    cd /src/statsd &&\
-    git checkout v0.7.2
-
-
-# =============================================================================
 # Install Grafana
 # =============================================================================
 RUN mkdir /src/grafana &&\
@@ -78,14 +59,6 @@ RUN mkdir /src/grafana &&\
     wget https://grafanarel.s3.amazonaws.com/builds/grafana-2.1.3.linux-x64.tar.gz -O /src/grafana.tar.gz &&\
     tar -xzf /src/grafana.tar.gz -C /opt/grafana --strip-components=1 &&\
     rm /src/grafana.tar.gz
-
-
-# =============================================================================
-# Install IoTF Connector for StatsD
-# =============================================================================
-RUN mkdir -p /opt/connector-statsd &&\
-    wget https://raw.githubusercontent.com/ibm-watson-iot/connector-statsd/master/connector-statsd.py -O /opt/connector-statsd/connector-statsd.py
-ADD iotf-statsd/application.cfg /opt/connector-statsd/application.cfg
 
 
 # =============================================================================
@@ -98,9 +71,6 @@ ADD grafana-autoconfig /opt/grafana-autoconfig/
 # =============================================================================
 # Configuration
 # =============================================================================
-
-# Configure StatsD
-ADD statsd/config.js /src/statsd/config.js
 
 # Configure Carbon and Graphite-Web
 ADD graphite/webapp /opt/graphite/webapp/graphite/
@@ -128,13 +98,6 @@ ADD supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
 # Grafana
 EXPOSE  80
-
-# StatsD UDP port
-EXPOSE  8125/udp
-
-# StatsD Management port
-EXPOSE  8126
-
 
 # =============================================================================
 # Run
