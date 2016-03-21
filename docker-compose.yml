@@ -7,6 +7,9 @@ services:
       context: .
     volumes:
       - "/mnt/whisper:/opt/graphite/storage/whisper"
+      - "/mnt/grafana:/opt/grafana/data"
+    ports: 
+      - "80:80"
     mem_limit: 512M
     restart: always
   
