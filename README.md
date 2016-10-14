@@ -9,8 +9,6 @@ The easiest way to use this project is with [Docker Compose](https://www.docker.
 ```
 [root@localhost ~]# export IOT_API_KEY=<your api key>
 [root@localhost ~]# export IOT_API_TOKEN=<your auth token>
-[root@localhost ~]# git clone https://github.com/ibm-watson-iot/connector-statsd
-[root@localhost ~]# git clone https://github.com/ibm-watson-iot/grafana4iot
-[root@localhost ~]# cd grafana4iot
+[root@localhost ~]# wget https://github.com/ibm-watson-iot/grafana4iot/blob/master/docker-compose.yml
 [root@localhost ~]# docker-compose up
 ```
