@@ -3,8 +3,7 @@ version: '2'
 services:
   grafana:
     image: grafana4iot
-    build:
-      context: .
+    build: github.com/ibm-watson-iot/grafana4iot.git
     volumes:
       - "/mnt/whisper:/opt/graphite/storage/whisper"
       - "/mnt/grafana:/opt/grafana/data"
@@ -15,8 +14,7 @@ services:
   
   connector:
     image: connector-statsd
-    build:
-      context: ../connector-statsd
+    build: github.com/ibm-watson-iot/connector-statsd.git
     links:
       - grafana:graphite
     environment:
