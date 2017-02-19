@@ -38,7 +38,7 @@ else:
 	
 uri = 'http://localhost:3000/api/dashboards/db'
 for filename in os.listdir(dashboardHome):
-    if filename.endswith(".json"):
+	if filename.endswith(".json"):
 		with open(os.path.join(dashboardHome, filename), "r") as dashboardFile:
 			dashboardData = json.load(dashboardFile)
 			
