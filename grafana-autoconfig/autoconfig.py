@@ -1,3 +1,4 @@
+import os
 import sys
 import requests
 import json 
@@ -6,6 +7,9 @@ import time
 # Supervisor will start all programs at the same time, so allow 
 # 10 seconds for grafana to start up before we try to configure it
 time.sleep(10)
+
+
+dashboardHome = "/opt/grafana-autoconfig/dashboards"
 
 uri = 'http://localhost:3000/api/datasources'
 r = requests.get(uri, auth=('admin', 'admin'))
@@ -31,3 +35,25 @@ else:
 	# was ready, supervisor will perform an auto restart with non-zero exit code
 	print("Error getting datasources from %s" % uri)
 	sys.exit(1)
+	
+uri = 'http://localhost:3000/api/dashboards/db'
+for filename in os.listdir(dashboardHome):
+    if filename.endswith(".json"):
+		with open(os.path.join(dashboardHome, filename), "r") as dashboardFile:
+			dashboardData = json.load(dashboardFile)
+			
+			requestData = { "dashboard": dashboardData, "overwrite": True }
+			requestHeaders = {"Accept": "application/json", "Content-Type": "application/json"} 
+			r = requests.post(uri, auth=('admin', 'admin'), data=json.dumps(requestData), headers=requestHeaders)
+			
+			# 200 – Created
+			# 400 – Errors (invalid json, missing or invalid fields, etc)
+			# 401 – Unauthorized
+			# 412 – Precondition failed
+			# The 412 status code is used when a newer dashboard already 
+			# exists (newer, its version is greater than the version that was sent). 
+			# The same status code is also used if another dashboard exists 
+			# with the same title. The response body will look like this:
+			print("%s - %s" % (filename, r.status_code))
+
+

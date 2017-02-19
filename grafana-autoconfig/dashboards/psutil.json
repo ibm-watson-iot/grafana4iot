@@ -1,5 +1,4 @@
 {
-  "id": 1,
   "title": "psutil data",
   "originalTitle": "psutil data",
   "tags": [],
@@ -45,7 +44,7 @@
           },
           "targets": [
             {
-              "target": "stats.hldtxx.$typeId.$deviceId.psutil.cpu"
+              "target": "stats.wiotp.*.$typeId.$deviceId.psutil.cpu"
             }
           ],
           "thresholds": "",
@@ -92,7 +91,7 @@
           },
           "targets": [
             {
-              "target": "stats.hldtxx.$typeId.$deviceId.psutil.mem"
+              "target": "stats.wiotp.*.$typeId.$deviceId.psutil.mem"
             }
           ],
           "thresholds": "",
@@ -161,7 +160,7 @@
           "targets": [
             {
               "hide": false,
-              "target": "stats.hldtxx.$typeId.$deviceId.psutil.cpu"
+              "target": "stats.wiotp.*.$typeId.$deviceId.psutil.cpu"
             }
           ],
           "timeFrom": null,
@@ -224,7 +223,7 @@
           "targets": [
             {
               "hide": false,
-              "target": "stats.hldtxx.$typeId.$deviceId.psutil.mem"
+              "target": "stats.wiotp.*.$typeId.$deviceId.psutil.mem"
             }
           ],
           "timeFrom": null,
@@ -286,7 +285,7 @@
           "targets": [
             {
               "hide": false,
-              "target": "stats.hldtxx.$typeId.$deviceId.psutil.network.down"
+              "target": "stats.wiotp.*.$typeId.$deviceId.psutil.network.down"
             }
           ],
           "timeFrom": null,
@@ -348,7 +347,7 @@
           "targets": [
             {
               "hide": false,
-              "target": "stats.hldtxx.$typeId.$deviceId.psutil.network.up"
+              "target": "stats.wiotp.*.$typeId.$deviceId.psutil.network.up"
             }
           ],
           "timeFrom": null,
@@ -438,7 +437,7 @@
             "selected": true
           }
         ],
-        "query": "stats.hldtxx.*",
+        "query": "stats.wiotp.*.*",
         "refresh": true,
         "refresh_on_load": false,
         "regex": "",
@@ -469,7 +468,7 @@
             "selected": false
           }
         ],
-        "query": "stats.hldtxx.$typeId.*",
+        "query": "stats.wiotp.*.$typeId.*",
         "refresh": true,
         "refresh_on_load": false,
         "regex": "",

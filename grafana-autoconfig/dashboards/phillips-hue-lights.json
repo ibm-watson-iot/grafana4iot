@@ -1,5 +1,4 @@
 {
-  "id": 2,
   "title": "Phillips Hue Lights",
   "originalTitle": "Phillips Hue Lights",
   "tags": [],
@@ -54,7 +53,7 @@
           },
           "targets": [
             {
-              "target": "stats.hldtxx.LCT003.$deviceId.state.reachable"
+              "target": "stats.wiotp.*.LCT003.$deviceId.state.reachable"
             }
           ],
           "thresholds": "0,1",
@@ -117,7 +116,7 @@
           },
           "targets": [
             {
-              "target": "stats.hldtxx.LCT003.$deviceId.state.on"
+              "target": "stats.wiotp.*.LCT003.$deviceId.state.on"
             }
           ],
           "thresholds": "0,1",
@@ -192,11 +191,11 @@
           "steppedLine": false,
           "targets": [
             {
-              "target": "alias(stats.hldtxx.LCT003.$deviceId.state.bri, 'Brightness')",
+              "target": "alias(stats.wiotp.*.LCT003.$deviceId.state.bri, 'Brightness')",
               "textEditor": false
             },
             {
-              "target": "alias(stats.hldtxx.LCT003.$deviceId.state.sat, 'Saturation')",
+              "target": "alias(stats.wiotp.*.LCT003.$deviceId.state.sat, 'Saturation')",
               "textEditor": false
             }
           ],
@@ -266,7 +265,7 @@
           "steppedLine": false,
           "targets": [
             {
-              "target": "alias(stats.hldtxx.LCT003.$deviceId.state.ct, 'Colour Temperature')",
+              "target": "alias(stats.wiotp.*.LCT003.$deviceId.state.ct, 'Colour Temperature')",
               "textEditor": false
             }
           ],
@@ -342,7 +341,7 @@
           },
           "targets": [
             {
-              "target": "stats.hldtxx.LCT003.$deviceId.state.reachable"
+              "target": "stats.wiotp.*.LCT003.$deviceId.state.reachable"
             }
           ],
           "thresholds": "0,1",
@@ -405,7 +404,7 @@
           },
           "targets": [
             {
-              "target": "stats.hldtxx.LCT003.$deviceId.state.on"
+              "target": "stats.wiotp.*.LCT003.$deviceId.state.on"
             }
           ],
           "thresholds": "0,1",
@@ -480,11 +479,11 @@
           "steppedLine": false,
           "targets": [
             {
-              "target": "alias(stats.hldtxx.LCT003.$deviceId.state.bri, 'Brightness')",
+              "target": "alias(stats.wiotp.*.LCT003.$deviceId.state.bri, 'Brightness')",
               "textEditor": false
             },
             {
-              "target": "alias(stats.hldtxx.LCT003.$deviceId.state.sat, 'Saturation')",
+              "target": "alias(stats.wiotp.*.LCT003.$deviceId.state.sat, 'Saturation')",
               "textEditor": false
             }
           ],
@@ -554,7 +553,7 @@
           "steppedLine": false,
           "targets": [
             {
-              "target": "alias(stats.hldtxx.LCT003.$deviceId.state.ct, 'Colour Temperature')",
+              "target": "alias(stats.wiotp.*.LCT003.$deviceId.state.ct, 'Colour Temperature')",
               "textEditor": false
             }
           ],
@@ -632,7 +631,7 @@
           },
           "targets": [
             {
-              "target": "stats.hldtxx.LCT003.$deviceId.state.reachable"
+              "target": "stats.wiotp.*.LCT003.$deviceId.state.reachable"
             }
           ],
           "thresholds": "0,1",
@@ -695,7 +694,7 @@
           },
           "targets": [
             {
-              "target": "stats.hldtxx.LCT003.$deviceId.state.on"
+              "target": "stats.wiotp.*.LCT003.$deviceId.state.on"
             }
           ],
           "thresholds": "0,1",
@@ -770,11 +769,11 @@
           "steppedLine": false,
           "targets": [
             {
-              "target": "alias(stats.hldtxx.LCT003.$deviceId.state.bri, 'Brightness')",
+              "target": "alias(stats.wiotp.*.LCT003.$deviceId.state.bri, 'Brightness')",
               "textEditor": false
             },
             {
-              "target": "alias(stats.hldtxx.LCT003.$deviceId.state.sat, 'Saturation')",
+              "target": "alias(stats.wiotp.*.LCT003.$deviceId.state.sat, 'Saturation')",
               "textEditor": false
             }
           ],
@@ -844,7 +843,7 @@
           "steppedLine": false,
           "targets": [
             {
-              "target": "alias(stats.hldtxx.LCT003.$deviceId.state.ct, 'Colour Temperature')",
+              "target": "alias(stats.wiotp.*.LCT003.$deviceId.state.ct, 'Colour Temperature')",
               "textEditor": false
             }
           ],
@@ -951,7 +950,7 @@
             "selected": true
           }
         ],
-        "query": "stats.hldtxx.LCT003.*",
+        "query": "stats.wiotp.*.LCT003.*",
         "refresh": true,
         "refresh_on_load": false,
         "type": "query"

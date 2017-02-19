@@ -1,5 +1,4 @@
 {
-  "id": 2,
   "title": "Samsung SmartThings",
   "originalTitle": "Samsung SmartThings",
   "tags": [],
@@ -60,7 +59,7 @@
           "steppedLine": true,
           "targets": [
             {
-              "target": "aliasByNode(keepLastValue(stats.hldtxx.smartthings.*.motion.motion, inf), 3)",
+              "target": "aliasByNode(keepLastValue(stats.wiotp.*.smartthings.*.motion.motion, inf), 3)",
               "textEditor": false
             }
           ],
@@ -125,7 +124,7 @@
           "steppedLine": false,
           "targets": [
             {
-              "target": "aliasByNode(keepLastValue(asPercent(stats.hldtxx.smartthings.*.battery.battery, 1), inf), 3)",
+              "target": "aliasByNode(keepLastValue(asPercent(stats.wiotp.*.smartthings.*.battery.battery, 1), inf), 3)",
               "textEditor": false
             }
           ],
@@ -198,7 +197,7 @@
           "steppedLine": false,
           "targets": [
             {
-              "target": "aliasByNode(keepLastValue(stats.hldtxx.smartthings.*.temperature.temperature, inf), 3)",
+              "target": "aliasByNode(keepLastValue(stats.wiotp.*.smartthings.*.temperature.temperature, inf), 3)",
               "textEditor": false
             }
           ],
@@ -263,7 +262,7 @@
           "steppedLine": true,
           "targets": [
             {
-              "target": "aliasByNode(keepLastValue(stats.hldtxx.smartthings.*.meter.power, inf), 3)",
+              "target": "aliasByNode(keepLastValue(stats.wiotp.*.smartthings.*.meter.power, inf), 3)",
               "textEditor": false
             }
           ],
