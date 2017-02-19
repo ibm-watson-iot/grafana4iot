@@ -46,10 +46,10 @@ for filename in os.listdir(dashboardHome):
 			requestHeaders = {"Accept": "application/json", "Content-Type": "application/json"} 
 			r = requests.post(uri, auth=('admin', 'admin'), data=json.dumps(requestData), headers=requestHeaders)
 			
-			# 200 – Created
-			# 400 – Errors (invalid json, missing or invalid fields, etc)
-			# 401 – Unauthorized
-			# 412 – Precondition failed
+			# 200 - Created
+			# 400 - Errors (invalid json, missing or invalid fields, etc)
+			# 401 - Unauthorized
+			# 412 - Precondition failed
 			# The 412 status code is used when a newer dashboard already 
 			# exists (newer, its version is greater than the version that was sent). 
 			# The same status code is also used if another dashboard exists 
