@@ -2,7 +2,8 @@ version: '2'
 
 services:
   grafana:
-    image: grafana4iot
+    #image: grafana4iot
+    image: grafana
     build: github.com/ibm-watson-iot/grafana4iot.git
     volumes:
       - "/mnt/whisper:/opt/graphite/storage/whisper"

@@ -1,4 +1,4 @@
-FROM ubuntu:14.04
+FROM ubuntu:16.04
 
 # References:
 # - https://github.com/kamon-io/docker-grafana-graphite
@@ -21,9 +21,15 @@ ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get -y update
 RUN apt-get -y install git wget curl nano
 RUN apt-get -y install gunicorn supervisor nginx-light build-essential
-RUN apt-get -y install python-pip python-dev python-support \
-                       python-django-tagging python-simplejson python-cairo \
+
+RUN wget http://launchpadlibrarian.net/109052632/python-support_1.0.15_all.deb
+RUN dpkg -i python-support_1.0.15_all.deb
+
+RUN apt-get -y install python-pip python-dev \
+                       python-simplejson python-cairo \
                        python-pysqlite2 python-memcache
+
+RUN pip install 'django-tagging<0.4'
 
 # Graphite python module dependencies
 RUN pip install Twisted==11.1.0
@@ -54,9 +60,10 @@ RUN git clone https://github.com/graphite-project/graphite-web.git /src/graphite
 # =============================================================================
 # Install Grafana
 # =============================================================================
+#   wget https://grafanarel.s3.amazonaws.com/builds/grafana-2.1.3.linux-x64.tar.gz -O /src/grafana.tar.gz &&
 RUN mkdir /src/grafana &&\
     mkdir /opt/grafana &&\
-    wget https://grafanarel.s3.amazonaws.com/builds/grafana-2.1.3.linux-x64.tar.gz -O /src/grafana.tar.gz &&\
+    wget https://s3-us-west-2.amazonaws.com/grafana-releases/release/grafana-4.6.1.linux-x64.tar.gz -O /src/grafana.tar.gz &&\
     tar -xzf /src/grafana.tar.gz -C /opt/grafana --strip-components=1 &&\
     rm /src/grafana.tar.gz
 
