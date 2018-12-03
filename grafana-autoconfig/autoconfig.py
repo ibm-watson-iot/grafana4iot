@@ -5,8 +5,8 @@ import json
 import time
 
 # Supervisor will start all programs at the same time, so allow 
-# 10 seconds for grafana to start up before we try to configure it
-time.sleep(10)
+# 20 seconds for grafana to start up before we try to configure it
+time.sleep(20)
 
 
 dashboardHome = "/opt/grafana-autoconfig/dashboards"
@@ -55,5 +55,3 @@ for filename in os.listdir(dashboardHome):
 			# The same status code is also used if another dashboard exists 
 			# with the same title. The response body will look like this:
 			print("%s - %s" % (filename, r.status_code))
-
-
